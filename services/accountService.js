@@ -61,6 +61,12 @@ const userList = (req) => {
         dynamiceQuery += ` asc `;
       }
 
+      let usersTotal = await sequelize.query(dynamiceQuery, {
+        replacements: replacements,
+        model: User,
+        mapToModel: true
+      });
+
       let page = (parseInt(pageNumber) - 1) * parseInt(pageSize);
       dynamiceQuery += ` limit ${pageSize} offset ${page}`;
 
@@ -78,7 +84,10 @@ const userList = (req) => {
       }
       resolve({
         status : 200,
-        users : users
+        users : users,
+        meta : {
+          total : usersTotal.length
+        }
       });
       console.log("[END] userList service");
     } catch (error) {
