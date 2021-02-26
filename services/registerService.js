@@ -24,7 +24,7 @@ const register = (req) => {
             if(user){
                return resolve(
                   {
-                    "code": 400,
+                    "status": 400,
                     "message": "User already exists"
                   }  
                 )
@@ -42,7 +42,7 @@ const register = (req) => {
                     employeeId: employee.employeeId
                 }).then(function () {
                     resolve({
-                        "code": 200,
+                        "status": 200,
                         "message": "User details saved successfully"
                     });
                 });
