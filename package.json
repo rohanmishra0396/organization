@@ -4,9 +4,10 @@
   "description": "Application to create the ebay templates",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dekamco",
+  "author": "rohan mishra",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",

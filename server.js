@@ -34,7 +34,7 @@ app.use((error, req, res, next) => {
     
     
 })
-
-app.listen(3001,function(){
-    console.log("Server is running");
+let port = process.env.PORT || 3000;
+app.listen(port,function(){
+    console.log("Server is running on port "+port);
 });
