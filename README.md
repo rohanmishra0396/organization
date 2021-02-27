@@ -45,7 +45,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is an example of using node js framework as your backend service to develop restful apis with ease
+This project is an example of using node js framework as your backend service to develop restful apis with ease.
+Below is the technical synopsis of the overall project implementation :-
+1) Have divided project into different modules, so that debugging the application will be easy.
+2) Have implemented error handling in case of any exception occurs.
+3) Have used express.js for seamless api calls to the backend. 
+4) To implement autentication have used passport.js library.
+5) Have fortified the security of the data using crypto js to encrypt id which is being set in the jwt token.
+6) Have also used bcrypt.js to store encrypted password in database instead of plain text.
 
 ### Built With
 
